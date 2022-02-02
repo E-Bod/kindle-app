@@ -1,0 +1,13 @@
+.card{
+    width: 10rem; 
+    font-size: 10px;
+}
+
+div{
+    margin: 50px;
+}
+
+.card-link:hover{
+    color:aliceblue;
+}
+
