@@ -4,11 +4,15 @@
  <div class="container-fluid d-flex ">
 <kA-sidenavbar>Loading...</kA-sidenavbar>
 
-<div>
-    <kA-vertcard> Loading...</kA-vertcard>
+<div *ngFor ="let product of products">
+    <kA-vertcard img={{product.img}} author= {{product.author}} description={{product.description}}> Loading...</kA-vertcard>
 </div>
-<kA-horzcard class="m-5"> Loading...</kA-horzcard>
 
+
+</div>
+<div class="container-fluid d-flex " >
+    
+<kA-horzcard class="m-5"> Loading...</kA-horzcard>
 </div>
 
 <!--- This is the actuall website. Change background color here -->
