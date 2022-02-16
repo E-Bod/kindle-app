@@ -9,13 +9,5 @@ import { ProductItemModel } from './items/product-item.model';
 })
 export class AppComponent {
   title = 'kindle-app';
-  // new info
-  products: ProductItemModel [] = [];
 
-  constructor(){
-    for(var product of mock_list){
-      console.log(product);
-      this.products.push(product);
-    }
-  }
 }
