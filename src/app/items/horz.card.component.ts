@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component,Input } from "@angular/core";
 
 @Component({
     selector: 'kA-horzcard',
@@ -7,5 +7,13 @@ import { Component } from "@angular/core";
 })
 
 export class HorzCardComponent{
+    @Input() img: string;
+    @Input() description: string;
+    @Input() author: string;
 
+    constructor(){
+        this.img = "";
+        this.description = "";
+        this.author = ""
+    }
 }

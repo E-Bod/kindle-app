@@ -1,9 +1,10 @@
 <div class="container-fluid d-flex ">
     <kA-sidenavbar>Loading...</kA-sidenavbar>
- 
-   
-    
-        
-    <kA-horzcard class="m-5"> Loading...</kA-horzcard>
-    
+
+    <div class="container-fluid ">
+        <div *ngFor="let product of products">
+            <kA-horzcard img={{product.img}} author={{product.author}} description={{product.description}}> Loading...
+            </kA-horzcard>
+        </div>
+    </div>
 </div>

@@ -9,7 +9,14 @@ import { ProductItemModel } from "./product-item.model";
 })
 export class ListViewComponent {
   // new info
-  
+  products: ProductItemModel [] = [];
+
+  constructor(){
+    for(var product of mock_list){
+      console.log(product);
+      this.products.push(product);
+    }
+  }
 
   
 }
