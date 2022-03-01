@@ -12,6 +12,9 @@ import { HomeLayoutComponent } from './items/home-layout-component';
 import { ListViewComponent } from './items/list-view-layout.component';
 import { RecentViewComponent } from './items/recent-view-layout.component';
 import { ReverseViewComponent } from './items/reverse-purchase-layout.component';
+import{ HttpClientModule} from '@angular/common/http';
+import { UserInfoComponent } from './user-info/user-info.component'
+
 
 @NgModule({
   declarations: [
@@ -24,11 +27,13 @@ import { ReverseViewComponent } from './items/reverse-purchase-layout.component'
     HomeLayoutComponent,
     ListViewComponent,
     RecentViewComponent,
-    ReverseViewComponent
+    ReverseViewComponent,
+    UserInfoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
