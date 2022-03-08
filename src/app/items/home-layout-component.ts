@@ -1,22 +1,33 @@
-import { Component } from "@angular/core";
-import { mock_list } from "./mock-list";
+import { Component, OnInit } from "@angular/core";
+
 import { ProductItemModel } from "./product-item.model";
+import { ProductsService } from "./products.service";
 
 
 @Component({
-    selector: 'kA-home-layout',
-    templateUrl: 'home-layout-component.html',
-    styleUrls: ['home-layout-component.css']
+  selector: 'kA-home-layout',
+  templateUrl: 'home-layout-component.html',
+  styleUrls: ['home-layout-component.css']
 })
-export class HomeLayoutComponent{
-    // new info
-  products: ProductItemModel [] = [];
+export class HomeLayoutComponent implements OnInit {
+  // new info
+  products: ProductItemModel[] = [];
 
-  constructor(){
-    for(var product of mock_list){
-      console.log(product);
-      this.products.push(product);
-    }
+  constructor(private productsService: ProductsService) {
+
   }
+  // constructor is always called before ngOnInit
+  ngOnInit(): void {
 
+    this.productsService.getProducts().subscribe((data: ProductItemModel[]) => {
+      console.log("Fetch Data");
+      console.log(data);
+      for (var product of data) {
+        
+        this.products.push(product);
+      }
+
+
+    });
+  }
 }

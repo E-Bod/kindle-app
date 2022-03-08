@@ -3,11 +3,12 @@
         Failed to fetch user data
     </p>
 </div>
+
 <div *ngIf="myInfo != undefined">
-    <div class="container-fluid" >
+    <div class="container-fluid">
         <div class="row">
             <div class="col-3">
-                User:  {{myInfo.FirstName}} {{myInfo.LastName}}
+                User: {{myInfo.FirstName}} {{myInfo.LastName}}
             </div>
             <div class="col-6">
                 <a href={{myInfo.GitHub}}>
@@ -15,6 +16,5 @@
                 </a>
             </div>
         </div>
-    </div> 
-    
+    </div>
 </div>
