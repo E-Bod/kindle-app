@@ -13,7 +13,12 @@ import { ListViewComponent } from './items/list-view-layout.component';
 import { RecentViewComponent } from './items/recent-view-layout.component';
 import { ReverseViewComponent } from './items/reverse-purchase-layout.component';
 import{ HttpClientModule} from '@angular/common/http';
-import { UserInfoComponent } from './user-info/user-info.component'
+import { UserInfoComponent } from './user-info/user-info.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore'
 
 
 @NgModule({
@@ -33,7 +38,9 @@ import { UserInfoComponent } from './user-info/user-info.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
