@@ -1,0 +1,7 @@
+Main Features
+- Created a service component that gets and organizes the data from the database. 
+- this essentially allows us to use an ngOnInit in exchange for the ngForLoop in order to
+- push the data to our website.
+
+Bonus Features
+- No bonus features were implemented at this time
