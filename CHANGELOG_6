@@ -1,0 +1,8 @@
+Main Features
+- created an admin router that leads to card form
+- generated an add-product component which leads into the form
+- input information into card form and a new card will be added to the webpage and database
+
+
+Bonus Features
+- admin button is attached to the three vertical dots in the upper left corner
