@@ -6,6 +6,7 @@ import { HomeLayoutComponent } from './items/home-layout-component';
 import { ListViewComponent } from './items/list-view-layout.component';
 import { RecentViewComponent } from './items/recent-view-layout.component';
 import { ReverseViewComponent } from './items/reverse-purchase-layout.component';
+import { AddProductComponent } from './items/add-product/add-product.component';
 
 const routes:Routes = [
   {
@@ -13,6 +14,9 @@ const routes:Routes = [
   },
   {
     path: 'Grid-View', component: GridViewComponent
+  },
+  {
+    path: 'admin', component: AddProductComponent
   },
   {
     path: 'home' , component: HomeLayoutComponent

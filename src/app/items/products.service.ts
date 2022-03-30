@@ -19,4 +19,8 @@ export class ProductsService {
        return this.db.list("products",ref => ref.orderByChild("price").startAt(10)).valueChanges();
     }
 
+    addProduct(product: ProductItemModel){
+      this.db.list<ProductItemModel>("products").push(product);
+    }
+
 }
