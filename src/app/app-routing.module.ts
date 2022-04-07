@@ -7,6 +7,7 @@ import { ListViewComponent } from './items/list-view-layout.component';
 import { RecentViewComponent } from './items/recent-view-layout.component';
 import { ReverseViewComponent } from './items/reverse-purchase-layout.component';
 import { AddProductComponent } from './items/add-product/add-product.component';
+import { AuthenticationComponent } from './auth/authentication/authentication.component';
 
 const routes:Routes = [
   {
@@ -17,6 +18,9 @@ const routes:Routes = [
   },
   {
     path: 'admin', component: AddProductComponent
+  },
+  {
+    path: 'auth', component: AuthenticationComponent
   },
   {
     path: 'home' , component: HomeLayoutComponent
