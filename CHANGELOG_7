@@ -1,0 +1,8 @@
+Main Features
+- Added authentication components that will take information from a form and add it to the backend
+- due to an SSL error the information is prevented from reaching the backend
+- Firebase is primed and ready for the users information
+- the authentication component and service appear to be functional without erros
+
+Bonus Features
+- no bonus features were developed for this lab
