@@ -13,15 +13,20 @@ export class AuthenticationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  public onSubmit(data: NgForm){
-console.log("Button Clicked");
-console.log(data);
-this.auth.signup(data.value.email, data.value.password).subscribe(data => {
-  console.log(data);
-}
+  public onSubmit(data: NgForm) {
+    console.log("Button Clicked");
+    console.log(data);
+    
+    this.auth.signup(data.value.email, data.value.password).subscribe(
+      data => {
+        console.log(data);
+      },
+      error =>{
+        console.log(error.error);
+      }
 
-)
+    );
 
-data.reset();
+    data.reset();
   }
 }

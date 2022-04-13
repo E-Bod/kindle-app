@@ -1,10 +1,10 @@
 <div class="container">
     <div class="row">
         <div class="col-6">
-            <form #authForm="ngForm" (ngSubmit) ="onSubmit(authForm.value">
+            <form #authForm="ngForm" (ngSubmit) ="onSubmit(authForm)">
                 <div class="input-group">
                     <span class="input-group-text">
-                        Email
+                        email
                     </span>
                     <input type="text" class="form-control" placeholder="user@email.com" 
                     ngModel name="email" 
@@ -13,7 +13,7 @@
 
                 <div class="input-group">
                     <span class="input-group-text">
-                        Password
+                        password
 
                     </span>
                     <input type="password" class="form-control" placeholder="********" 
@@ -24,10 +24,11 @@
                 <button class="btn btn-dark" type="submit" [disabled]="!authForm.valid">
                     Login
                 </button>
-                <button class="btn btn-dark" type="submit">
+                <button class="btn btn-dark" type="submit" [disabled]="!authForm.valid">
                     Sign Up
                 </button>
             </form>
         </div>
+        
     </div>
 </div>

@@ -5,9 +5,9 @@ import { environment } from "src/environments/environment";
 @Injectable({
     providedIn: 'root'
 })
-// Copy basurl and apiKey from screen shots
+
 export class AuthenticationService {
-    private baseUrl: string = "";
+    private baseUrl: string = "http://identitytoolkit.googleapis.com/v1/accounts";
     private signUpEndpoint: string = "signUp";
     public constructor(private http:HttpClient){
 
